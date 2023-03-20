@@ -16,6 +16,6 @@ module "vpc" {
 }
 
 module "key_pair" {
-  source = "https://github.com/landerpogiii3/awsKeyPair.git"
+  source = "github.com/landerpogiii3/awsKeyPair"
   key-pair = var.ssh_key_name
 }
