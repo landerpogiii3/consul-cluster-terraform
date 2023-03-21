@@ -27,22 +27,22 @@ This may be an inconvenience but because of versioning issues, all of the module
 
 ## Inputs Description ##
 
-**allowed_inbound_cidrs** :	Similar to EKS cluster, this is set to 0.0.0.0/0 value for ease of access in development environment. But for production, this must be set to the Public IP leased and used by the organization. 
+**allowed_inbound_cidrs**:	Similar to EKS cluster, this is set to 0.0.0.0/0 value for ease of access in development environment. But for production, this must be set to the Public IP leased and used by the organization. 
 
-consul_version:		The version of Consul 
+**consul_version**:		The version of Consul 
 
-name_prefix:		The prefix used in resource names. For tracking and management, I have set this to ”dimacali” 
+**name_prefix**:		The prefix used in resource names. For tracking and management, I have set this to ”dimacali” 
 
-owner:			The value of the owner tag on EC2 instances. This is set to the role I am currently using. 
+**owner**:			The value of the owner tag on EC2 instances. This is set to the role I am currently using. 
 
-vpc_id:			This value constantly changes as previously mentioned. This is the ID of the VPC that the other module creates and generates. 
+**vpc_id**:			This value constantly changes as previously mentioned. This is the ID of the VPC that the other module creates and generates. 
 
-consul_clients:		The number of consul clients. For dev environment, this is set to 2 
+**consul_clients**:		The number of consul clients. For dev environment, this is set to 2 
 
-consul_servers:		The number of consul servers. For dev environment, this is set to 4 
+**consul_servers**:		The number of consul servers. For dev environment, this is set to 4 
 
-instance_type:		The instance type I selected is based on the recommendation from the Recommended Consul Architecture which is m5.large 
+**instance_type**:		The instance type I selected is based on the recommendation from the Recommended Consul Architecture which is m5.large 
 
-key_name:			This will be the name of my SSH key. I have set this to dimacaliSingaporeKeyPair. Note that this must also be consistent with the Key-Pair module. 
+**key_name**:			This will be the name of my SSH key. I have set this to dimacaliSingaporeKeyPair. Note that this must also be consistent with the Key-Pair module. 
 
-public_ip:			Whether the EC2 instances should have public IP. This is set to true so that I can SSH into the instances directly. 
+**public_ip**:			Whether the EC2 instances should have public IP. This is set to true so that I can SSH into the instances directly. 
