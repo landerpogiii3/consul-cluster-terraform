@@ -41,8 +41,8 @@ This may be an inconvenience but because of versioning issues, all of the module
 
 **consul_servers**:		The number of consul servers. For dev environment, this is set to 4 
 
-**instance_type**:		The instance type I selected is based on the recommendation from the Recommended Consul Architecture which is m5.large 
+**instance_type**:		The instance type I selected is based on the recommendation from the Recommended Consul Architecture which is m5.large
 
-**key_name**:			This will be the name of my SSH key. I have set this to dimacaliSingaporeKeyPair. Note that this must also be consistent with the Key-Pair module. 
+**key_name**:			This will be the name of my SSH key. I have set this to dimacaliSingaporeKeyPair. Note that this must also be consistent with the Key-Pair module.
 
-**public_ip**:			Whether the EC2 instances should have public IP. This is set to true so that I can SSH into the instances directly. 
+**public_ip**:			Whether the EC2 instances should have public IP. This is set to true so that I can SSH into the instances directly.
