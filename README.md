@@ -27,7 +27,7 @@ This may be an inconvenience but because of versioning issues, all of the module
 
 ## Inputs Description ##
 
-*allowed_inbound_cidrs* :	Similar to EKS cluster, this is set to 0.0.0.0/0 value for ease of access in development environment. But for production, this must be set to the Public IP leased and used by the organization. 
+**allowed_inbound_cidrs** :	Similar to EKS cluster, this is set to 0.0.0.0/0 value for ease of access in development environment. But for production, this must be set to the Public IP leased and used by the organization. 
 
 consul_version:		The version of Consul 
 
