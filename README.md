@@ -84,4 +84,20 @@ This should not let you use the current prompt. If an error occurs, troubleshoot
 
 This command will let you access the Web GUI of the consul server. To access the consul server, use this convention: [Public IPv4 DNS | Public IPv4 address]:8500 
 
-example: ec2-18-142-255-157.ap-southeast-1.compute.amazonaws.com:8500 
+example: ec2-18-142-255-157.ap-southeast-1.compute.amazonaws.com:8500
+
+## Client ##
+
+To add clients to the cluster, execute the following commands: 
+
+Install consul the same way you installed it on the server. Stop when the consul –v command is satisfied. 
+
+Add clients by executing: 
+
+    consul agent –join [consul-server private IP address] 
+
+example:	consul agent –join 10.0.4.98 --data-dir /tmp/consul 
+
+This should not let you use the current prompt. If an error occurs, troubleshoot accordingly. 
+
+Once successful, refresh the Webpage of the consul server and navigate to *Nodes*
