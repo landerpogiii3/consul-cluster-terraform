@@ -46,3 +46,32 @@ This may be an inconvenience but because of versioning issues, all of the module
 **key_name**:			This will be the name of my SSH key. I have set this to dimacaliSingaporeKeyPair. Note that this must also be consistent with the Key-Pair module.
 
 **public_ip**:			Whether the EC2 instances should have public IP. This is set to true so that I can SSH into the instances directly.
+
+When applied, this will create consul_clients number of Consul Clients and consul_servers number of Consul Servers. To configure the cluster, Servers and Clients must be configured accordingly. This can be done using user_data input but for some reason, I’m having difficulty bootstrapping the commands with my config. For now, I configured the cluster manually through SSH. The commands are documented in a sh file though. 
+
+The cluster was configured this way:
+
+## Server ##
+
+The consul was installed through the following commands: 
+
+Add the HashiCorp GPG key 
+
+    curl --fail --silent --show-error –location https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo dd of=/usr/share/keyrings/hashicorp-archive-keyring.gpg 
+
+Add the official HashiCorp Linux repository. 
+
+    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee -a /etc/apt/sources.list.d/hashicorp.list 
+
+Update 
+
+    sudo apt update 
+
+
+Install the latest version of Consul. Use –y to automatically respond yes to prompts 
+
+    sudo apt install consul -y 
+
+Verify the installation 
+
+    consul –v 
