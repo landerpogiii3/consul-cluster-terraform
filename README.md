@@ -74,4 +74,14 @@ Install the latest version of Consul. Use –y to automatically respond yes to p
 
 Verify the installation 
 
-    consul –v 
+    consul –v
+
+To run consul, execute the command: 
+
+    consul agent –dev –client=0.0.0.0 -bind 10.0.4.98 
+
+This should not let you use the current prompt. If an error occurs, troubleshoot accordingly. 
+
+This command will let you access the Web GUI of the consul server. To access the consul server, use this convention: [Public IPv4 DNS | Public IPv4 address]:8500 
+
+example: ec2-18-142-255-157.ap-southeast-1.compute.amazonaws.com:8500 
